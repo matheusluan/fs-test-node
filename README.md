@@ -35,5 +35,25 @@ Get all games from data json
 ]
 ```
 
+### GET `/games/:search`
+
+Search games by title;
+
+#### Response 
+
+```json
+[
+	{
+		"id": "playngo_legacy-of-dead",
+		"slug": "playngo-legacy-of-dead",
+		"title": "Legacy of Dead",
+		"providerName": "Play'n GO",
+		"thumb": {
+			"url": "//images.ctfassets.net/5acrbcz937qe/3tqUiWTXh5AbOmcyQoR7zJ/606fcd268a6a24c14ba86ad55dc8d4cd/LegacyOfDead_280x280.jpg"
+		}
+	}
+]
+```
+
 
 
