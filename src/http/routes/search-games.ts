@@ -20,8 +20,6 @@ export async function searchGames(app: FastifyInstance) {
             return game.title.toLowerCase().includes(search.toLowerCase());
         });
 
-        return reply.send({
-            filteredGames
-        })
+        return reply.send(filteredGames);
     })
 }
