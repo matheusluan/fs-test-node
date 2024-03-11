@@ -37,39 +37,37 @@ function calculateCoins(): { coins: number; spinedReel1: string[]; spinedReel2: 
         ● 3 lemons in a row: 3 coins
     */
 
-    for (let i = 0; i < reel1.length; i++) {
-        //IF the position has 3 equal fruits, else, verify if has 2 equals fruits in a row; 
-        if (spinedReel1[i] === spinedReel2[i] && spinedReel2[i] === spinedReel3[i]) {
-            switch (spinedReel1[i]) {
-                case 'cherry':
-                    coins += 50;
-                    break;
-                case 'apple':
-                    coins += 20;
-                    break;
-                case 'banana':
-                    coins += 15;
-                    break;
-                case 'lemon':
-                    coins += 3;
-                    break;
-                default:
-                    break;
-            }
-        } else if (spinedReel1[i] === spinedReel2[i] || spinedReel2[i] === spinedReel3[i] || spinedReel1[i] === spinedReel3[i]) {
-            switch (spinedReel1[i]) {
-                case 'cherry':
-                    coins += 40;
-                    break;
-                case 'apple':
-                    coins += 10;
-                    break;
-                case 'banana':
-                    coins += 5;
-                    break;
-                default:
-                    break;
-            }
+    //IF the position has 3 equal fruits, else, verify if has 2 equals fruits in a row; 
+    if (spinedReel1[3] === spinedReel2[3] && spinedReel2[3] === spinedReel3[3]) {
+        switch (spinedReel1[3]) {
+            case 'cherry':
+                coins += 50;
+                break;
+            case 'apple':
+                coins += 20;
+                break;
+            case 'banana':
+                coins += 15;
+                break;
+            case 'lemon':
+                coins += 3;
+                break;
+            default:
+                break;
+        }
+    } else if (spinedReel1[3] === spinedReel2[3] || spinedReel2[3] === spinedReel3[3] || spinedReel1[3] === spinedReel3[3]) {
+        switch (spinedReel1[3]) {
+            case 'cherry':
+                coins += 40;
+                break;
+            case 'apple':
+                coins += 10;
+                break;
+            case 'banana':
+                coins += 5;
+                break;
+            default:
+                break;
         }
     }
 
