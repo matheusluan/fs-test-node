@@ -55,5 +55,47 @@ Search games by title;
 ]
 ```
 
+### POST `/play`
+
+Return the result of the spin and the coins the player won.
+
+#### Response 
+
+```json
+{
+    "coins": 0,
+    "spinedReel1": [
+        "lemon",
+        "apple",
+        "lemon",
+        "cherry",
+        "lemon",
+        "lemon",
+        "banana",
+        "banana"
+    ],
+    "spinedReel2": [
+        "lemon",
+        "lemon",
+        "lemon",
+        "apple",
+        "apple",
+        "lemon",
+        "cherry",
+        "banana"
+    ],
+    "spinedReel3": [
+        "lemon",
+        "apple",
+        "lemon",
+        "banana",
+        "apple",
+        "cherry",
+        "lemon",
+        "lemon"
+    ]
+}
+```
+
 
 
