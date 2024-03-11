@@ -56,7 +56,7 @@ function calculateCoins(): { coins: number; spinedReel1: string[]; spinedReel2: 
                 break;
         }
     } else if (spinedReel1[1] === spinedReel2[1] || spinedReel2[1] === spinedReel3[1]) {
-        switch (spinedReel1[3]) {
+        switch (spinedReel1[1]) {
             case 'cherry':
                 coins += 40;
                 break;
