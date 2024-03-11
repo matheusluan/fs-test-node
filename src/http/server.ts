@@ -1,6 +1,6 @@
 import fastify from 'fastify';
-import cookie from '@fastify/cookie';
 import cors from '@fastify/cors';
+import cookie from '@fastify/cookie';
 
 import { getGames } from './routes/get-games';
 import { searchGames } from './routes/search-games';
