@@ -28,7 +28,7 @@ function calculateCoins(): { coins: number; spinedReel1: string[]; spinedReel2: 
     let coins = 0;
 
     /*
-    Will compare the positions of corresponding elements in the reels, and calculate the rewards using the rules:
+    Will compare the position [3] of corresponding elements in the reels, and calculate the rewards using the rules:
     
     Rewards
         ● 3 cherries in a row: 50 coins, 2 cherries in a row: 40 coins
@@ -55,7 +55,7 @@ function calculateCoins(): { coins: number; spinedReel1: string[]; spinedReel2: 
             default:
                 break;
         }
-    } else if (spinedReel1[3] === spinedReel2[3] || spinedReel2[3] === spinedReel3[3] || spinedReel1[3] === spinedReel3[3]) {
+    } else if (spinedReel1[3] === spinedReel2[3] || spinedReel2[3] === spinedReel3[3]) {
         switch (spinedReel1[3]) {
             case 'cherry':
                 coins += 40;
