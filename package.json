@@ -2,27 +2,27 @@
   "name": "fs-test-node",
   "version": "1.0.0",
   "description": "",
-  "main": "src/http/server.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/http/server.ts",
-    "build": "tsc",
-    "start": "node src/http/server.js"
+    "dev": "tsx src/server.ts",
+    "build": "tsup src",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.11.16",
+    "@types/node": "^20.11.25",
     "prisma": "^5.9.1",
-    "tsx": "^4.7.0",
-    "typescript": "^5.3.3"
+    "tsup": "^8.0.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
   },
   "dependencies": {
     "@fastify/cookie": "^9.3.1",
     "@fastify/cors": "^9.0.1",
     "@prisma/client": "^5.9.1",
     "fastify": "^4.26.0",
-    "ioredis": "^5.3.2",
     "zod": "^3.22.4"
   }
 }
