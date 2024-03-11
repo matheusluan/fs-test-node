@@ -4,7 +4,7 @@ import { FastifyInstance } from "fastify";
 import { Game } from "../../types/game";
 import gameData from '../../utils/data/game-data.json';
 
-export async function searchGames(app: FastifyInstance) {
+export async function SearchGames(app: FastifyInstance) {
     app.get('/games/:search', async (request, reply) => {
 
         //Validate if is string (i could put a length validation, uuid, etc...)

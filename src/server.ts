@@ -1,10 +1,11 @@
 import fastify from 'fastify';
 import cors from '@fastify/cors';
-import cookie from '@fastify/cookie';
 
-import { getGames } from './http/routes/get-games';
-import { searchGames } from './http/routes/search-games';
+import { Play } from './http/routes/play';
+import { GetGames } from './http/routes/get-games';
+import { SearchGames } from './http/routes/search-games';
 
+//Init app
 const app = fastify();
 
 //Cors allow
@@ -12,16 +13,12 @@ app.register(cors, {
     origin: true
 })
 
-//Cookie
-app.register(cookie, {
-    secret: "fs-test-app-cookie",
-    hook: "onRequest"
-});
-
 //HTTP rotes
-app.register(getGames);
-app.register(searchGames);
+app.register(GetGames);
+app.register(SearchGames);
+app.register(Play);
 
+//Listen
 app.listen({
     host: '0.0.0.0',
     port: process.env.PORT ? Number(process.env.PORT) : 3333

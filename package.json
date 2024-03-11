@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "tsx src/server.ts",
+    "dev": "tsx watch src/server.ts",
     "build": "tsup src",
     "start": "node dist/server.js"
   },
@@ -19,7 +19,6 @@
     "typescript": "^5.4.2"
   },
   "dependencies": {
-    "@fastify/cookie": "^9.3.1",
     "@fastify/cors": "^9.0.1",
     "@prisma/client": "^5.9.1",
     "fastify": "^4.26.0",
